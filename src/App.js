@@ -1,29 +1,27 @@
 
-import './App.css';
-import CustomNavbar from './components/MyNav';
-import CustomAlert from './components/Welcome';
-import CustomFooter from './components/MyFooter';
 import 'bootstrap/dist/css/bootstrap.min.css'
-import AllTheBooks from './components/AllTheBooks';
-import BookList from './components/BookList';
-import SingleBook from './components/SingleBook';
-import books from './data/book.json'
+import './App.css'
+import MyNav from './components/MyNav'
+import MyFooter from './components/MyFooter'
+import Welcome from './components/Welcome'
+// import AllTheBooks from './components/AllTheBooks'
+import { Container } from 'react-bootstrap'
+import BookList from './components/BookList'
+
+import fantasy from './data/book.json'
+
 function App() {
   return (
-   <>
-  <header>
-    <CustomNavbar></CustomNavbar>
-  </header>
-  <main>
-    <CustomAlert></CustomAlert>
-    <BookList book={books[0]}/>
-    <AllTheBooks></AllTheBooks>
-  </main>
-  <footer>
-    {/* <customFooter></customFooter> */}
-  </footer>
-   </>
-  );
+    <>
+      <MyNav />
+      <Container>
+        <Welcome />
+        {/* <AllTheBooks /> */}
+        <BookList books={fantasy} />
+      </Container>
+      <MyFooter />
+    </>
+  )
 }
 
-export default App;
+export default App

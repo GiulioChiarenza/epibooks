@@ -1,18 +1,9 @@
-import  Alert  from "react-bootstrap/Alert"
+import { Alert } from 'react-bootstrap'
 
-const CustomAlert = () => (
-    <Alert variant="success">
-    <Alert.Heading>Hey, nice to see you</Alert.Heading>
-    <p>
-      Aww yeah, you successfully read this important alert message. This
-      example text is going to run a bit longer so that you can see how
-      spacing within an alert works with this kind of content.
-    </p>
-    <hr />
-    <p className="mb-0">
-      Whenever you need to, be sure to use margin utilities to keep things
-      nice and tidy.
-    </p>
+const Welcome = () => (
+  <Alert className="text-center">
+    <h1>Benvenuti in EpiBooks!</h1>
   </Alert>
 )
-export default CustomAlert
+
+export default Welcome
